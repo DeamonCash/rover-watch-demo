@@ -1,0 +1,20 @@
+[
+  {
+    "number": "01",
+    "file": "01-rems-data.ipynb",
+    "title": "Source & quality",
+    "description": "Inspect the real measurements and the explicit exclusion rules."
+  },
+  {
+    "number": "02",
+    "file": "02-rems-patterns.ipynb",
+    "title": "Daily cycles & unusual bins",
+    "description": "Describe patterns and inspect sensitivity without imposing an anomaly percentage."
+  },
+  {
+    "number": "03",
+    "file": "03-rems-relationships.ipynb",
+    "title": "Relationships & PCA",
+    "description": "Separate common daily rhythms from residual associations."
+  }
+]

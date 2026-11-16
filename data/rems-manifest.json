@@ -1,0 +1,106 @@
+{
+  "sources": [
+    {
+      "sol": 100,
+      "url": "https://atmos.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_00090_00179/SOL00100/RME_406323911RMD01000000000_______P9.TAB",
+      "file": "RME_406323911RMD01000000000_______P9.TAB",
+      "sha256": "be0ecfea58f2957502bc8f2723b52dc4c2e0e38600bfb2f67f7c1fa6e9c216b9"
+    },
+    {
+      "sol": 101,
+      "url": "https://atmos.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_00090_00179/SOL00101/RME_406412686RMD01010000000_______P9.TAB",
+      "file": "RME_406412686RMD01010000000_______P9.TAB",
+      "sha256": "cbb18a0f160f2078b1ae8ab3677ac40be9570e261235781f432a9a56227411ca"
+    },
+    {
+      "sol": 102,
+      "url": "https://atmos.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_00090_00179/SOL00102/RME_406501460RMD01020000000_______P9.TAB",
+      "file": "RME_406501460RMD01020000000_______P9.TAB",
+      "sha256": "d950acf5cdedeabf347eb020b2c0c068196aa7231de65830efd5973af07dee04"
+    },
+    {
+      "sol": 103,
+      "url": "https://atmos.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_00090_00179/SOL00103/RME_406590235RMD01030000000_______P9.TAB",
+      "file": "RME_406590235RMD01030000000_______P9.TAB",
+      "sha256": "9d548247a517666c1a703d832edd9ccac86126aac298f49e1bd6d2a8e1a34231"
+    },
+    {
+      "sol": 104,
+      "url": "https://atmos.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_00090_00179/SOL00104/RME_406679009RMD01040000000_______P9.TAB",
+      "file": "RME_406679009RMD01040000000_______P9.TAB",
+      "sha256": "1e5c830e1c8ca5a2c9fca8a0cc4b6fff5644a82397af544c4734e85af4a4e779"
+    },
+    {
+      "sol": 105,
+      "url": "https://atmos.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_00090_00179/SOL00105/RME_406767783RMD01050000000_______P9.TAB",
+      "file": "RME_406767783RMD01050000000_______P9.TAB",
+      "sha256": "186f5b040b54e13ff5a7109501eed5264c6d157cf143af61808b2df89f2a853b"
+    },
+    {
+      "sol": 106,
+      "url": "https://atmos.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_00090_00179/SOL00106/RME_406856558RMD01060000000_______P9.TAB",
+      "file": "RME_406856558RMD01060000000_______P9.TAB",
+      "sha256": "9ab6b44980001e1f0f5562863ca152a639e503141f998ce26db072a8ee53e92c"
+    },
+    {
+      "sol": 107,
+      "url": "https://atmos.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_00090_00179/SOL00107/RME_406945332RMD01070000000_______P9.TAB",
+      "file": "RME_406945332RMD01070000000_______P9.TAB",
+      "sha256": "e41f3d26e5a8538aeb4f810c9aa38b94297d5a6e24431287d231fffd7e424e8e"
+    },
+    {
+      "sol": 108,
+      "url": "https://atmos.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_00090_00179/SOL00108/RME_407034107RMD01080000000_______P9.TAB",
+      "file": "RME_407034107RMD01080000000_______P9.TAB",
+      "sha256": "c8de7d6b226ddc52e2057f2b75671d84672cc007bc15119b46598e655a0407fc"
+    },
+    {
+      "sol": 109,
+      "url": "https://atmos.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_00090_00179/SOL00109/RME_407122881RMD01090000000_______P9.TAB",
+      "file": "RME_407122881RMD01090000000_______P9.TAB",
+      "sha256": "0dc6792339b4611b98186affbedc07d046134b44ffd5a12f6667e084b97af84c"
+    }
+  ],
+  "audit": [
+    {
+      "key": "BOOM1_LOCAL_AIR_TEMP",
+      "name": "Air temperature \u00b7 Boom 1",
+      "rows": 306257,
+      "missing": 300,
+      "quality_excluded": 30,
+      "retained": 305927
+    },
+    {
+      "key": "BOOM2_LOCAL_AIR_TEMP",
+      "name": "Air temperature \u00b7 Boom 2",
+      "rows": 306257,
+      "missing": 300,
+      "quality_excluded": 2692,
+      "retained": 303265
+    },
+    {
+      "key": "PRESSURE",
+      "name": "Atmospheric pressure",
+      "rows": 306257,
+      "missing": 300,
+      "quality_excluded": 3116,
+      "retained": 302841
+    },
+    {
+      "key": "BRIGHTNESS_TEMP",
+      "name": "Ground brightness temperature",
+      "rows": 306257,
+      "missing": 12900,
+      "quality_excluded": 127,
+      "retained": 293230
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "cpu": "Apple M5",
+    "architecture": "arm64",
+    "gpu": "Not used"
+  }
+}
