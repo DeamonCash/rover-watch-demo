@@ -62,3 +62,5 @@ Individual observations come from NASA-processed REMS products, not uncalibrated
 The individual-observation view offers an optional five-minute trend: the median of accepted observations in each five-minute window, connecting consecutive available windows only. Empty windows are not filled.
 
 The smooth trend uses visual interpolation between medians of consecutive 5-minute windows; intermediate curve values are not observations, and missing windows remain gaps.
+
+The optional smooth trend is available at all intervals. It interpolates visually between consecutive available values and does not bridge missing intervals; intermediate values are not measurements.
