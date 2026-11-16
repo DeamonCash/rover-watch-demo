@@ -34,3 +34,17 @@ def test_hourly_export_matches_median_of_accepted_raw_observations():
     index = next(i for i, (sol, hour) in enumerate(zip(export['sol'], export['hour'])) if sol == 100 and hour == 0.5)
     assert len(values) >= 10
     assert abs(export['channels']['BOOM1_LOCAL_AIR_TEMP']['values'][index] - values.median()) < 0.0001
+
+def test_raw_export_keeps_each_accepted_measurement():
+    import gzip
+    from rems_pipeline import RAW
+    from rems_analysis import VARIABLES, quality_mask
+    frame = pd.read_parquet(RAW/'parsed.parquet')
+    frame = frame.loc[frame.sol == 100]
+    with gzip.open(ROOT/'web/data/raw/sol-100.json.gz', 'rt') as f:
+        exported = json.load(f)
+    assert len(exported['hour']) == len(frame)
+    for key, spec in VARIABLES.items():
+        expected = frame[key].notna() & quality_mask(frame[spec['flag']], spec['bits'])
+        assert sum(value is not None for value in exported['channels'][key]) == int(expected.sum())
+        assert len(exported['channels'][key]) == len(frame)
