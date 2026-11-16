@@ -1,0 +1,12 @@
+const fs = require('node:fs');
+const assert = require('node:assert/strict');
+const source = fs.readFileSync('web/environment.js', 'utf8');
+eval(source.slice(source.indexOf('function medianValue'), source.indexOf('function trendPoints')));
+const line = Array.from({length: 12}, (_, i) => ({x: 100 + i / 24, y: 2 * i + 3}));
+const fit = lowessSeries(line);
+assert(fit.y.every((value, i) => value === null || Math.abs(value - line[i].y) < 1e-7));
+const separated = lowessSeries([{x:100,y:2},{x:100+1/24,y:3},{x:101,y:5},{x:101+1/24,y:6}]);
+assert(separated.x.includes(null));
+assert.equal(separated.y.filter(Number.isFinite).length, 4);
+assert.deepEqual(lowessSeries([{x:100,y:7}]).y, [null]);
+console.log('LOWESS linear fit, gap, and sparse-data checks passed');
