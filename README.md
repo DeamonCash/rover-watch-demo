@@ -23,7 +23,7 @@ This is retrospective exploratory analysis, not forecasting, fault diagnosis, or
 
 All accepted observations contribute to the descriptive baselines. No train/test split is needed for that purpose; this design does not establish detection performance on unseen data. Isolation Forest is not part of the current study. Earlier anonymous telemetry experiments remain in private project history.
 
-The review score is `abs(r - median(r)) / (1.4826 * median(abs(r - median(r))))`, where `r` is the departure from the same-local-time median. At least five contributing sols are required. The 1.4826 factor rescales MAD; it does **not** set a 99% threshold. The default cutoff 3.5 is a review heuristic, with sensitivity at 3.0 and 4.5. Zero MAD yields no score. No fixed anomaly proportion is imposed.
+The review score is `abs(r - median(r)) / (1.4826 * median(abs(r - median(r))))`, where `r` is the departure from the same-local-time median. At least five contributing sols are required. The 1.4826 factor rescales MAD; it does **not** set a 99% threshold. The default cutoff 3.0 is a review heuristic, with alternatives at 3.5 and 4.5. Zero MAD yields no score. No fixed anomaly proportion is imposed.
 
 The ten-sol interval and uneven coverage limit generalization. Raw and residual correlation matrices have different eligible samples. Temporal dependence prevents naive independent-observation significance claims. PCA summarizes association, not causality or sensor identity. Quality-filtered data are not guaranteed error-free.
 
