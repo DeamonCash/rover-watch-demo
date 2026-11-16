@@ -60,3 +60,5 @@ Independent project by Mehdi, developed with AI assistance. No NASA/JPL affiliat
 Individual observations come from NASA-processed REMS products, not uncalibrated sensor voltages. Each is scored against the hourly profile and the hourly residual MAD from the ten-sol study. Closely spaced measurements are dependent, and this exploratory rule can flag many samples from one sustained period; those counts are not independent events or verified faults. Rebuild these exports with `python make_raw_views.py`.
 
 The individual-observation view offers an optional five-minute trend: the median of accepted observations in each five-minute window, connecting consecutive available windows only. Empty windows are not filled.
+
+The smooth trend uses visual interpolation between medians of consecutive 5-minute windows; intermediate curve values are not observations, and missing windows remain gaps.
