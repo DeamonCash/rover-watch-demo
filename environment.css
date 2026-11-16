@@ -17,9 +17,9 @@
 
 #event-list{max-height:300px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--muted) transparent}.selected-event{cursor:default;background:var(--redsoft);border-left:3px solid var(--red)}.event-label{display:block;font-size:9px;letter-spacing:1px;color:var(--red);margin-bottom:8px}.clear-selection{margin:12px 15px;font-size:11px}.alerts .event strong{display:block}
 /* The hover marker grows once, holds, and shrinks when the pointer leaves. */
-#signal-chart .tracehoverpulse .point{pointer-events:none}
-#signal-chart .tracehoverpulse .outlier-grow{animation:outlier-grow 1s ease-in-out forwards}
-#signal-chart .tracehoverpulse .outlier-shrink{animation:outlier-shrink 1s ease-in-out forwards}
+#signal-chart .tracehoverpulse .point,#residual-chart .traceresidualpulse .point{pointer-events:none}
+#signal-chart .tracehoverpulse .outlier-grow,#residual-chart .traceresidualpulse .outlier-grow{animation:outlier-grow 1s ease-in-out forwards}
+#signal-chart .tracehoverpulse .outlier-shrink,#residual-chart .traceresidualpulse .outlier-shrink{animation:outlier-shrink 1s ease-in-out forwards}
 @keyframes outlier-grow{from{d:path("M4,0A4,4 0 1,1 -4,0A4,4 0 1,1 4,0Z");filter:drop-shadow(0 0 0 transparent)}to{d:path("M8,0A8,8 0 1,1 -8,0A8,8 0 1,1 8,0Z");filter:drop-shadow(0 0 7px var(--red))}}
 @keyframes outlier-shrink{from{d:path("M8,0A8,8 0 1,1 -8,0A8,8 0 1,1 8,0Z");filter:drop-shadow(0 0 7px var(--red))}to{d:path("M4,0A4,4 0 1,1 -4,0A4,4 0 1,1 4,0Z");filter:drop-shadow(0 0 0 transparent)}}
-@media(prefers-reduced-motion:reduce){#signal-chart .tracehoverpulse .point{animation:none;filter:drop-shadow(0 0 4px var(--red))}}
+@media(prefers-reduced-motion:reduce){#signal-chart .tracehoverpulse .point,#residual-chart .traceresidualpulse .point{animation:none;filter:drop-shadow(0 0 4px var(--red))}}
