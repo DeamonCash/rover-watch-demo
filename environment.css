@@ -14,3 +14,5 @@
 .hero-stats>div small{font-size:12px;line-height:1.5;color:var(--ink);max-width:220px}
 @media(max-width:1150px){.hero-stats>div small{font-size:11px}}
 @media(max-width:500px){.hero-stats>div small{font-size:10px;line-height:1.45}}
+
+#event-list{max-height:300px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--muted) transparent}.selected-event{cursor:default;background:var(--redsoft);border-left:3px solid var(--red)}.event-label{display:block;font-size:9px;letter-spacing:1px;color:var(--red);margin-bottom:8px}.clear-selection{margin:12px 15px;font-size:11px}.alerts .event strong{display:block}
