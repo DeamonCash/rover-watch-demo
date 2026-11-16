@@ -25,3 +25,5 @@
 @media(prefers-reduced-motion:reduce){#signal-chart .tracehoverpulse .point,#residual-chart .traceresidualpulse .point{animation:none;filter:drop-shadow(0 0 4px var(--red))}}
 
 .trend-control{display:flex;align-items:center;gap:8px;padding:8px 18px;color:var(--ink);font:12px var(--sans);cursor:pointer}.trend-control input{accent-color:var(--red)}
+
+.earth-comparison{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start;margin:0 0 20px;padding:19px 22px;border:1px solid var(--border);border-radius:11px;background:var(--surface)}.earth-comparison>div{display:grid;gap:6px}.earth-eyebrow{color:var(--muted);font-size:9px;letter-spacing:1.2px}.earth-comparison strong{font:400 23px var(--serif)}.earth-comparison small{color:var(--muted);font-size:11px;line-height:1.5}.earth-comparison a{color:inherit;text-underline-offset:3px}@media(max-width:600px){.earth-comparison{grid-template-columns:1fr;gap:18px}}
