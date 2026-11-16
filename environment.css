@@ -17,6 +17,6 @@
 
 #event-list{max-height:300px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--muted) transparent}.selected-event{cursor:default;background:var(--redsoft);border-left:3px solid var(--red)}.event-label{display:block;font-size:9px;letter-spacing:1px;color:var(--red);margin-bottom:8px}.clear-selection{margin:12px 15px;font-size:11px}.alerts .event strong{display:block}
 /* The hover-only fourth trace pulses around the active outlier. */
-#signal-chart .scatterlayer .trace:nth-child(4) .point{transform-box:fill-box;transform-origin:center;animation:outlier-pulse 2s ease-in-out infinite}
+#signal-chart .scatterlayer .trace:nth-child(4) .point{transform-box:fill-box;transform-origin:center;animation:outlier-pulse 6s ease-in-out infinite}
 @keyframes outlier-pulse{0%,100%{transform:scale(.67);filter:drop-shadow(0 0 0 transparent)}50%{transform:scale(1.18);filter:drop-shadow(0 0 7px var(--red))}}
 @media(prefers-reduced-motion:reduce){#signal-chart .scatterlayer .trace:nth-child(4) .point{animation:none;filter:drop-shadow(0 0 4px var(--red))}}
