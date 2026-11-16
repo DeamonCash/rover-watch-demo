@@ -11,7 +11,7 @@ A reproducible study of **306,257 original NASA PDS REMS records across sols 100
 ## What the project does
 
 - Audits missing values, duplicate timestamps, and instrument-specific confidence flags.
-- Aggregates accepted observations into ten-minute local-mean-solar-time bins without filling gaps.
+- Aggregates accepted observations into hourly or ten-minute local-mean-solar-time bins without filling gaps. Explore defaults to hourly; each view recomputes its own scores from source observations. The notebooks, Data sample and Relationships PCA retain the original ten-minute study.
 - Describes daily cycles and reviews departures using a robust median/MAD score.
 - Compares raw and daily-profile-adjusted relationships; explores standardized PCA on 579 complete bins.
 - Shows actual saved notebook outputs, downloadable data, source provenance, parameter choices, and limitations.

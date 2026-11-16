@@ -21,3 +21,16 @@ def test_export_invariants():
     assert np.max(np.abs(p['pca']['loadings']))<=1+1e-10
     assert p['pca']['n']>100
     assert not p['duplicates']
+
+def test_hourly_export_matches_median_of_accepted_raw_observations():
+    from rems_pipeline import RAW
+    from rems_analysis import VARIABLES, quality_mask
+    frame = pd.read_parquet(RAW/'parsed.parquet')
+    spec = VARIABLES['BOOM1_LOCAL_AIR_TEMP']
+    mask = (frame.sol == 100) & (frame.hour >= 0) & (frame.hour < 1)
+    mask &= quality_mask(frame[spec['flag']], spec['bits'])
+    values = frame.loc[mask, 'BOOM1_LOCAL_AIR_TEMP'].dropna() - spec['offset']
+    export = json.loads((ROOT/'web/data/rems-hourly.json').read_text())
+    index = next(i for i, (sol, hour) in enumerate(zip(export['sol'], export['hour'])) if sol == 100 and hour == 0.5)
+    assert len(values) >= 10
+    assert abs(export['channels']['BOOM1_LOCAL_AIR_TEMP']['values'][index] - values.median()) < 0.0001
