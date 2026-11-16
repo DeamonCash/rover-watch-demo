@@ -33,5 +33,3 @@
 .analysis-grid.trend-active{grid-template-columns:minmax(0,1fr)}
 
 .project-switch{display:flex;align-items:center;flex-shrink:0;padding:3px;border:1px solid var(--border);border-radius:999px;background:var(--soft)}.project-switch a{padding:8px 14px;border-radius:999px;text-decoration:none;font-size:12px;white-space:nowrap}.project-switch a[aria-current=page]{background:var(--ink);color:var(--bg)}.project-switch a:not([aria-current]):hover{background:var(--bg)}@media(max-width:800px){.project-switch{order:2}.topbar nav{order:3}}
-
-.project-switch-wrap{max-width:1920px;margin:auto;padding:12px 34px 0;display:flex;justify-content:flex-end}.project-switch{border-radius:8px;gap:2px;background:var(--surface)}.project-switch a{border-radius:5px;padding:7px 13px;color:var(--muted)}.project-switch a[aria-current=page]{font-weight:600}.project-switch a:not([aria-current]):hover{color:var(--ink)}
